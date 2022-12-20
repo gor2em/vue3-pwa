@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
-// https://vitejs.dev/config/
+import { VitePWA } from "vite-plugin-pwa";
+import manifest from "./manifest.json";
 export default defineConfig({
-  plugins: [vue()],
-})
+  plugins: [vue(), VitePWA(manifest)],
+});
